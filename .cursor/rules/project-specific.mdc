@@ -1,0 +1,37 @@
+# .cursorrules
+
+rules:
+  - name: Folder structure
+    description: "Keep code inside the correct folder paths."
+    examples:
+      - "UI components live in /app/components/"
+      - "Poll-related pages go in /app/polls/"
+      - "API routes go in /app/api/"
+      - "Do not mix UI components into /app/api/"
+
+  - name: Forms
+    description: "Always use react-hook-form + shadcn/ui for form handling and UI."
+    examples:
+      - "Use useForm from react-hook-form for validation"
+      - "Use <Form>, <FormField>, <FormItem>, <FormLabel>, <FormControl>, <FormMessage> from shadcn/ui"
+      - "Never use plain HTML form inputs directly"
+
+  - name: Supabase
+    description: "Use Supabase client for auth and database queries."
+    examples:
+      - "Use supabase.auth.signInWithOtp for login"
+      - "Use supabase.from('polls').insert() for inserting data"
+      - "Do not write raw SQL strings in the frontend"
+
+  - name: Poll feature
+    description: "Poll-related functionality should be reusable and consistent."
+    examples:
+      - "A new poll form goes under /app/polls/components/NewPollForm.tsx"
+      - "API handlers for polls go in /app/api/polls/"
+      - "Database interaction goes through Supabase client"
+
+  - name: Refactoring style
+    description: "Prefer hooks and functional components."
+    examples:
+      - "Use React hooks (useEffect, useState, custom hooks)"
+      - "Do not create class components"
